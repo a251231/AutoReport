@@ -57,7 +57,12 @@ def punchForm(form, session):
     res = session.post(url, data=datas, headers=headers)
     res_json = json.loads(res.content)
     print(res_json)
+    headers={'Content-Type':'application/x-www-form-urlencoded'}
+	url='https://qmsg.zendee.cn/send/529183076c52424584b17e32e5387c50 ' #填你自己的key，想发到群里的把send改成group。
 
+	message='夫祸患常积于忽微，而智勇多困于所溺！【每日健康提醒】打卡'+str(res_json)+' 加油奥利给！！@face=201@@face=201@ ' #想发送啥消息自己改
+	data={'msg':message}
+	requests.post(url=url,headers=headers,data=data)
 
 def submit(username, password, address, params=None):
     s = login(username, password)
