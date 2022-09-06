@@ -60,8 +60,8 @@ def punchForm(form, session):
     headers9={'Content-Type':'application/x-www-form-urlencoded'}
     url9='https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=477d90af-7603-47eb-8535-261a09649707' #填你自己的key，想发到群里的把send改成group。
     message9='夫祸患常积于忽微，而智勇多困于所溺！【每日健康提醒】打卡'+str(res_json)+' 加油奥利给！！@face=201@@face=201@ ' #想发送啥消息自己改
-    text={ "content": '你好'+message9+'hhh' }
-    data9={"msgtype": "text", 'text':text}
+    text={ "content":message9}
+    data9={"msgtype": "text",'text':text}
     re=requests.post(url=url9,headers=headers9,data=data9)
     print(re.json())
 
