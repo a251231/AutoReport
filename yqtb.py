@@ -62,7 +62,7 @@ def punchForm(form, session):
     message9='夫祸患常积于忽微，而智勇多困于所溺！【每日健康提醒】打卡'+str(res_json)+' 加油奥利给！！@face=201@@face=201@ ' #想发送啥消息自己改
     data9={"msgtype": "text", 'content':message9}
     re=requests.post(url=url9,headers=headers9,data=data9)
-    print（re)
+    print（re.text)
 
 def submit(username, password, address, params=None):
     s = login(username, password)
