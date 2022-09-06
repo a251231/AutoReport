@@ -58,9 +58,9 @@ def punchForm(form, session):
     res_json = json.loads(res.content)
     print(res_json)
     headers9={'Content-Type':'application/x-www-form-urlencoded'}
-    url9='https://qmsg.zendee.cn/send/529183076c52424584b17e32e5387c50 ' #填你自己的key，想发到群里的把send改成group。
+    url9='https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=477d90af-7603-47eb-8535-261a09649707' #填你自己的key，想发到群里的把send改成group。
     message9='夫祸患常积于忽微，而智勇多困于所溺！【每日健康提醒】打卡'+str(res_json)+' 加油奥利给！！@face=201@@face=201@ ' #想发送啥消息自己改
-    data9={'msg':message9}
+    data9={"msgtype": "text", 'content':message9}
     requests.post(url=url9,headers=headers9,data=data9)
 
 def submit(username, password, address, params=None):
