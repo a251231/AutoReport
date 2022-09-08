@@ -68,7 +68,7 @@ def punchForm(form, session):
            "msgtype" : "text",
            "agentid" : 1000002,
            "text" : {
-               "content" : '程序已运行'+message9+'\n可查看<a href=\"https://yqtb.sut.edu.cn/"></a>，避免漏签。'
+               "content" : '程序已运行'+message9+'\n可查看<a href=\"https://yqtb.sut.edu.cn\">沈阳工业大学健康打卡系统</a>，避免漏签。'
            },
            "safe":0,
            "enable_id_trans": 0,
