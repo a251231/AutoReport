@@ -62,19 +62,19 @@ def punchForm(form, session):
     message9='夫祸患常积于忽微，而智勇多困于所溺！【每日健康提醒】打卡'+str(res_json)+' 加油奥利给！！[嘿哈][嘿哈] ' #想发送啥消息自己改
     text={ "content":message9}
     data9={
-   "touser" : "@all",
-   "toparty" : "PartyID1|PartyID2",
-   "totag" : "TagID1 | TagID2",
-   "msgtype" : "text",
-   "agentid" : 1000002,
-   "text" : {
-       "content" : '程序已运行'+message9+'\n可查看<a href=\"https://yqtb.sut.edu.cn/"></a>，避免漏签。"
-   },
-   "safe":0,
-   "enable_id_trans": 0,
-   "enable_duplicate_check": 0,
-   "duplicate_check_interval": 1800
-}
+           "touser" : "@all",
+           "toparty" : "PartyID1|PartyID2",
+           "totag" : "TagID1 | TagID2",
+           "msgtype" : "text",
+           "agentid" : 1000002,
+           "text" : {
+               "content" : '程序已运行'+message9+'\n可查看<a href=\"https://yqtb.sut.edu.cn/"></a>，避免漏签。"
+           },
+           "safe":0,
+           "enable_id_trans": 0,
+           "enable_duplicate_check": 0,
+           "duplicate_check_interval": 1800
+         }
     re=requests.post(url=url9,headers=headers9,data=json.dumps(data9))
     print(re.json())
 
