@@ -59,7 +59,7 @@ def punchForm(form, session):
     print(res_json)
     headers9={'Content-Type':'application/x-www-form-urlencoded'}
     url9='https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=VRy_uuuFYJ-8g0QrUiiR_M2sJaUoLc5JaNCuMa24RfmC0qtHNliZR6qG9Vrri8FsndXkVAbIdow-YbXez0az6EaSzlQofjvK3a_4HnVofJAACtc_nUbhv3PhbsrjNBS3YZjUZco5EmpM8OXVC9bLdfN8TrgLx4fvTDfQI1D_L3Pw4gaa6MtWYmn7pAYaZASFgkdr8REMsDTElwxUs4qxRg' #填你自己的key，想发到群里的把send改成group。
-    message9='夫祸患常积于忽微，而智勇多困于所溺！【每日健康提醒】打卡'+str(res_json)+' 加油奥利给！！[嘿哈][嘿哈] ' #想发送啥消息自己改
+    message9='夫祸患常积于忽微，而智勇多困于所溺！【每日健康提醒】'+str(res_json)+' 加油奥利给！！[嘿哈][嘿哈] ' #想发送啥消息自己改
     text={ "content":message9}
     data9={
            "touser" : "@all",
@@ -68,7 +68,7 @@ def punchForm(form, session):
            "msgtype" : "text",
            "agentid" : 1000002,
            "text" : {
-               "content" : '程序已运行'+message9+'\n可查看<a href=\"https://yqtb.sut.edu.cn\">沈阳工业大学健康打卡系统</a>，避免漏签。'
+               "content" : '程序已运行，'+message9+'\n可查看<a href=\"https://yqtb.sut.edu.cn\">沈阳工业大学健康打卡系统</a>，避免漏签。'
            },
            "safe":0,
            "enable_id_trans": 0,
