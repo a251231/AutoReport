@@ -6,7 +6,7 @@ name: daily report
 on:
   schedule:
     # UTC时间，UTC+8时间需要在原时间上减去8
-    - cron:  '5 2,3,8 * * *'
+    - cron:  '5,55 2,3,8 * * *'
 
 
   # Allows you to run this workflow manually from the Actions tab
